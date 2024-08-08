@@ -1,6 +1,7 @@
 # Summary
 
 - [Reglas de Equipo](./chapter_1.md)
+- [Contribuyendo a la wiki](./README.md)
 - [Generación de Imagen](./presentacion_tecdevs.md)
 - [Notas de requisitos](./notas_requisitos.md)
 - [CMMI](./cmmi.md)
