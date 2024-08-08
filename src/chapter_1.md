@@ -6,8 +6,8 @@
 4. Todos los integrantes del departamento deben de ser respetuosos los unos con los otros. (Excepto los jueves de racismo)
 5. Si un trabajo en particular excede los 30 minutos de elaboracion, se pedira la asesoria de un experto/autoridad. 
 6. Los integrantes del departamento deben respetar la configuración de mesas acordada y la limpieza del salón en todo momento. 
-7. Los integrantes del departamento no laboran los fines de semana. Sin embargo, si se presenta una situación extraordinaria, la cantidad de horas será definida de acuerdo a la carga de trabajo pendiente. 
-8. Todas las actividades deben de ser cronometradas. 
+7. Los integrantes del departamento no laboran los fines de semana. Sin embargo, si se presenta una situación extraordinaria, la cantidad de horas será definida de acuerdo a la carga de trabajo pendiente.
+8. Todas las actividades deben de ser cronometradas.
 9. El fondo departamental solamente será utilizado cuando al menos el 55% de los miembros del departamento estén de acuerdo. 
 10. Al hacer un aporte al fondo departamental, el monto debe de registrarse sobre el fondo total escrito en el pizarrón. 
 11. Las actividades individuales cronometrarlas en minutos efectivos. 
