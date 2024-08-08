@@ -24,4 +24,4 @@
   - [Comandos útiles](./wiki_desarrollo/comandos.md)
   - [Entrevistas para desarrollo](./wiki_desarrollo/entrevista_desarrollo.md)
   - [Cómo hacer control de calidad](./wiki_desarrollo/hacer_control_calidad.md)
-
+- [Contribuciones](./contribuciones.md)
