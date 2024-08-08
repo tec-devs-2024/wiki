@@ -30,6 +30,8 @@ Sé que hay una confusión porque se cree que el Pogram manager y poject manager
 
 # PO
 
+## PACO ES EL PO
+
 El PO es la voz del departamento en cara al cliente y también es la voz del cliente en cara al departamento. Un PO debe de ser empático, objetivo y precavido.
 
 El PO, al ser la voz del departamento y del cliente, debe de tener mucha precaución con sus palabras, ya que tiene en sus manos la relación con el cliente y esto impactará de manera directa al proyecto.
