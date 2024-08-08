@@ -14,24 +14,25 @@ Cuando se necesita recabar información del cliente
 
 - PP
 
-## ¿Qué archivos son necesarios?
-
-- Archivo de minutas para anotar el output
-
-## Creador o creadores
+## Creador/colaboradores
 
 - Félix Rojas
+- Reséndiz
 
-## Actores
-
-- Anotador 
-- Product Owner
-
-## Pre requisitos especiales
+## Pre requisitos
 
 - Junta o acuerdo previo para contactar al cliente
 - Fecha establecida con el cliente
 - Anotador asignado
+
+### Archivos
+
+- Archivo de minutas para anotar el output
+
+### Actores
+
+- Anotador 
+- Product Owner
 
 ## Resultado del proceso
 
