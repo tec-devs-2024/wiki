@@ -32,8 +32,8 @@ jobs:
         find . -type f | while read file; do
           filename=$(basename "$file")
           directory=$(dirname "$file" | sed 's/\.\///g' | sed 's/\//  /g')
-          directory=$(echo $directory | sed 's/ /  /g')
-          echo "- $directory[$filename]($file)" >> SUMMARY.md
+          directory=$(echo $directory | sed 's/ /  /g' | sed 's/\.$//')
+          echo "$directory- [$filename]($file)" >> SUMMARY.md
         done
 
 
