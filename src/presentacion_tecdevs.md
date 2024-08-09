@@ -4,7 +4,7 @@
 
 ### Quiénes somos
 
-> Somos un departamento que desarrolla soluciones tecnológicas de calidad con enfoque en los usuarios utilizando procesos estandarizados de la industria.
+> Somos estudiantes de ingeniería en tecnologías computacionales que busca desarrollarnos personal y profesionalmente.
 
 [Zuustento - notas](https://www.notion.so/Zuustento-notas-96a60d1f19df4d429b96d46fc15c2fdd?pvs=21)
 
