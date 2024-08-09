@@ -1,4 +1,4 @@
-name: Update SUMMARY.md test
+name: Update SUMMARY.md
 
 on:
   pull_request:
@@ -19,11 +19,11 @@ jobs:
           FILES=$(curl -s -H "Authorization: token ***" "https://api.github.com/repos/tec-devs-2024/wiki/git/trees/47037755e145bb71c41c7885c07ee8427aaa7df2?recursive=1" | jq -r 'if .tree then .tree[] | select(.type == "blob" and (.path | type == "string") and .path | startswith("src/") and .path | endswith(".md") and .path != "src/SUMMARY.md") | .path else empty end')
 
           # Update SUMMARY.md in the src folder
-          rm src/SUMMARY_test.md
-          touch src/SUMMARY_test.md
-          echo "# Summary" > src/SUMMARY_test.md
+          rm src/SUMMARY.md
+          touch src/SUMMARY.md
+          echo "# Summary" > src/SUMMARY.md
           for FILE in $FILES; do
-          echo "- [${FILE#src/}]($FILE)" >> src/SUMMARY_test.md
+          echo "- [${FILE#src/}]($FILE)" >> src/SUMMARY.md
           done
 
       - name: Commit and push changes
