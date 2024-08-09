@@ -24,8 +24,9 @@ jobs:
           for FILE in $FILES; do
             echo "- [${FILE#src/}]($FILE)" >> src/SUMMARY.md
           done
-          - name: Commit and push changes
-          run: |
+        
+      - name: Commit and push changes
+        run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add src/SUMMARY.md
