@@ -29,8 +29,7 @@ jobs:
         cd src
         find . -type f | while read file; do
           filename=$(basename "$file")
-          directory=$(dirname "$file")
-          directory=$(echo "$directory" | sed 's/\//  /g')
+          directory=$(dirname "$file" | sed 's/\.\///g' | sed 's/\//  /g')
           echo "- $directory[$filename]($file)" >> SUMMARY.md
         done
 
