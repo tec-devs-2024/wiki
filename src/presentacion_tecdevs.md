@@ -10,11 +10,11 @@
 
 ### Misión
 
-- Entregar soluciones tecnológicas de calidad priorizando a nuestros clientes a través de un proceso transparente y eficiente.
+- Consolidar un departamento comprometido con la salud de sus integrantes y establecer procesos de desarrollo para la mejora continua.
 
 ### Visión
 
-- Ser un departamento líder en el desarrollo de soluciones tecnológicas adaptadas a las necesidades de nuestros clientes mejorando la calidad de sus procesos.
+- Desarrollarnos mutuamente para cumplir nuestras pasiones y sueños.
 
 ### Valores
 
