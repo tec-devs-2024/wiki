@@ -4,17 +4,17 @@
 
 ### Quiénes somos
 
-> Somos un departamento que desarrolla soluciones tecnológicas de calidad con enfoque en los usuarios utilizando procesos estandarizados de la industria.
+> Somos estudiantes de ingeniería en tecnologías computacionales que busca desarrollarnos personal y profesionalmente.
 
 [Zuustento - notas](https://www.notion.so/Zuustento-notas-96a60d1f19df4d429b96d46fc15c2fdd?pvs=21)
 
 ### Misión
 
-- Entregar soluciones tecnológicas de calidad priorizando a nuestros clientes a través de un proceso transparente y eficiente.
+- Consolidar un departamento comprometido con la salud de sus integrantes y establecer procesos de desarrollo para la mejora continua.
 
 ### Visión
 
-- Ser un departamento líder en el desarrollo de soluciones tecnológicas adaptadas a las necesidades de nuestros clientes mejorando la calidad de sus procesos.
+- Desarrollarnos mutuamente para cumplir nuestras pasiones y sueños.
 
 ### Valores
 
@@ -28,9 +28,12 @@
 
 **NO ES NECESARIO (**pero estaría chulo**):** fotos de persona con un enunciado muy breve de experiencia
 
-### Objetivo actual.
+### Objetivo Departamental
 
-Entrega, para el final del modulo 1, un documento que indica como vamos a trabajar.
+- Alcanzar el nivel 2.6 de CMMI para el día 15 de noviembre de 2024.
+- Mejorar en un 15% la estimación de tiempos del departamento antes de finalizar el segundo periodo.
+
+> La mejora de la estimación se mide con el documento de Tiempos Efectivos: [Documento Tiempos Efectivos](https://docs.google.com/spreadsheets/d/1mN07ppeKDOhL_ZnEuqKyEHyQdnGfyAAks_kURFEzLgI/edit?usp=sharing)
 
 ---
 
