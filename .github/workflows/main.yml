@@ -15,9 +15,11 @@ jobs:
 
       - name: Update SUMMARY.md
         run: |
-          # Get the list of markdown files in the src directory and its subdirectories
-          FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1" | jq -r 'if .tree then .tree[] | select(.type == "blob" and (.path | type == "string") and .path | startswith("src/") and .path | endswith(".md") and .path != "src/SUMMARY.md") | .path else empty end')
-          
+          # Get and log the list of markdown files in the src directory and its subdirectories
+          FILES_JSON=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1")
+          echo "$FILES_JSON" | jq .
+          FILES=$(echo "$FILES_JSON" | jq -r 'if .tree then .tree[] | select(.type == "blob" and (.path | type == "string") and .path | startswith("src/") and .path | endswith(".md") and .path != "src/SUMMARY.md") | .path else empty end')
+
           # Update SUMMARY.md in the src folder
           rm src/SUMMARY.md
           touch src/SUMMARY.md
