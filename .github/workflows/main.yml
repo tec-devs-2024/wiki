@@ -52,7 +52,7 @@ jobs:
         }
 
         # Find all files in the directory and its subdirectories
-        find "$dir_path" -type f | sort | while read -r file; do
+        find "$dir_path" -type f ! -name "README.md" | sort | while read -r file; do
             create_link "$file" "$dir_path"
         done
 
