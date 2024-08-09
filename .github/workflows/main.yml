@@ -1,0 +1,67 @@
+name: Update SUMMARY.md
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  actions: write
+  contents: write
+  deployments: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+
+
+jobs:
+  generate-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+        persist-credentials: true
+
+    - name: Generate SUMMARY.md
+      run: |
+        #!/bin/bash
+
+        # Set the directory path
+        dir_path="src"
+
+        # Check if the directory exists
+        if [ ! -d "$dir_path" ]; then
+            echo "src directory does not exist"
+            exit 1
+        fi
+
+        # Create or overwrite SUMMARY.md
+        rm src/SUMMARY.md
+        echo "# Summary" > src/SUMMARY.md
+
+        # Function to indent markdown link
+        create_link() {
+            local file="$1"
+            local base_path="$2"
+            local rel_path="${file#$base_path/}"
+            local depth=$(echo "$rel_path" | grep -o '/' | wc -l)
+            local indent=$(printf '%*s' $((depth * 2)) '')
+            echo "${indent}* [${file##*/}]($rel_path)" >> src/SUMMARY.md
+        }
+
+        # Find all files in the directory and its subdirectories
+        find "$dir_path" -type f | sort | while read -r file; do
+            create_link "$file" "$dir_path"
+        done
+
+
+    - name: Commit and push if changed
+      run: |        
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git remote set-url origin https://felix-rojas:${{ secrets.BOT }}@github.com/tec-devs-2024/wiki.git
+        git add src/SUMMARY.md
+        git commit -m "Auto-Update SUMMARY.md" || exit 0
+        git push origin ${{ github.event.pull_request.head.ref }} || echo "No changes to push"
