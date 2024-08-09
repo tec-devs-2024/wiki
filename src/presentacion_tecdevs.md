@@ -28,9 +28,12 @@
 
 **NO ES NECESARIO (**pero estaría chulo**):** fotos de persona con un enunciado muy breve de experiencia
 
-### Objetivo actual.
+### Objetivo Departamental
 
-Entrega, para el final del modulo 1, un documento que indica como vamos a trabajar.
+- Alcanzar el nivel 2.6 de CMMI para el día 15 de noviembre de 2024.
+- Mejorar en un 15% la estimación de tiempos del departamento antes de finalizar el segundo periodo.
+
+> La mejora de la estimación se mide con el documento de Tiempos Efectivos: [Documento Tiempos Efectivos](https://docs.google.com/spreadsheets/d/1mN07ppeKDOhL_ZnEuqKyEHyQdnGfyAAks_kURFEzLgI/edit?usp=sharing)
 
 ---
 
