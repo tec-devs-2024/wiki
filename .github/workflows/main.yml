@@ -28,8 +28,14 @@ jobs:
       run: |
         cd src
         find . -type f | while read file; do
-          echo "- [${file#./}]($file)" >> SUMMARY.md
+          filename=$(basename "$file")
+          directory=$(dirname "$file")
+          if [ "$directory" != "." ]; then
+            directory="$directory  "
+            fi
+            echo "- $directory$filename($file)" >> SUMMARY.md
         done
+
 
     - name: Commit and push if changed
       run: |        
