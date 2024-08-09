@@ -1,4 +1,3 @@
-# AWS
+# Infraestructura
 
-Propietario: Diego Reséndiz Fernández
-Etiquetas: Infraestructura
+Este es sólo un ejemplo
