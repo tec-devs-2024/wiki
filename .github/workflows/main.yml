@@ -24,17 +24,36 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
         persist-credentials: true
 
-    - name: Generate Summary
+    - name: Generate SUMMARY.md
       run: |
-        cd src
-        rm SUMMARY.md
-        touch SUMMARY.md
-        find . -type f | while read file; do
-          filename=$(basename "$file")
-          directory=$(dirname "$file" | sed 's/\.\///g' | sed 's/\//  /g')
-          echo "$directory- [$filename]($file)" >> SUMMARY.md
-        done
+        #!/bin/bash
 
+        # Set the directory path
+        dir_path="src"
+
+        # Check if the directory exists
+        if [ ! -d "$dir_path" ]; then
+            echo "src directory does not exist"
+            exit 1
+        fi
+
+        # Create or overwrite SUMMARY.md
+        echo "# Summary" > SUMMARY.md
+
+        # Function to indent markdown link
+        create_link() {
+            local file="$1"
+            local base_path="$2"
+            local rel_path="${file#$base_path/}"
+            local depth=$(echo "$rel_path" | grep -o '/' | wc -l)
+            local indent=$(printf '%*s' $((depth * 2)) '')
+            echo "${indent}* [${file##*/}]($rel_path)" >> SUMMARY.md
+        }
+
+        # Find all files in the directory and its subdirectories
+        find "$dir_path" -type f | sort | while read -r file; do
+            create_link "$file" "$dir_path"
+        done
 
 
     - name: Commit and push if changed
