@@ -4,6 +4,15 @@ on:
   pull_request:
     types: [opened, synchronize]
 
+permissions:
+  actions: write
+  contents: write
+  deployments: write
+  pages: write
+  pull-requests: write
+  repository-projects: write
+
+
 jobs:
   generate-summary:
     runs-on: ubuntu-latest
