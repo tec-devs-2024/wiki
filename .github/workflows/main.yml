@@ -16,12 +16,11 @@ jobs:
       - name: Update SUMMARY.md
         run: |
           # Get the list of markdown files in the src directory and its subdirectories
-          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1" >> dirs.json
-          jq -r 'if .tree then .tree[] | select(.type == "blob" and (.path | type == "string") and .path | startswith("src/") and .path | endswith(".md") and .path != "src/SUMMARY.md") | .path else empty end' dirs.json >> FILES 
+          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1" >> dirs.jso
 
           # Update SUMMARY.md in the src folder
           echo "# Summary" > src/SUMMARY.md
-          for FILE in $FILES; do
+          for FILE in $dirs.json; do
             echo "- [${FILE#src/}]($FILE)" >> src/SUMMARY.md
           done
 
