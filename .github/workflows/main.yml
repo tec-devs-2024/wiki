@@ -5,32 +5,24 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  update-summary:
+  generate-summary:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Update SUMMARY.md
-        run: |
-          # Get the list of markdown files in the src directory and its subdirectories
-          curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1" >> dirs.json
-          FILES=$(echo "dirs.json") 
-          
-          # Update SUMMARY.md in the src folder
-          echo "# Summary" > src/SUMMARY.md
-          for FILE in $FILES; do
-            echo "- [${FILE#src/}]($FILE)" >> src/SUMMARY.md
-          done
-        
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add src/SUMMARY.md
-          git commit -m "Update SUMMARY.md" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} 
-          git push origin ${{ github.event.pull_request.head.ref }} || echo "No changes to push"
+    - name: Generate Summary
+      run: |
+        cd src
+        find . -type f | while read file; do
+          echo "- [${file#./}]($file)" >> SUMMARY.md
+        done
 
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'Your Name'
+        git config --global user.email 'your-email@users.noreply.github.com'
+        git add src/SUMMARY.md
+        git commit -m "Update SUMMARY.md" || exit 0
+        git push
