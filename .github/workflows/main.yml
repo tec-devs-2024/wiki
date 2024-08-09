@@ -16,7 +16,7 @@ jobs:
       - name: Update SUMMARY.md
         run: |
           # Get the list of markdown files in the src directory and its subdirectories
-          FILES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/git/trees/${{ github.event.pull_request.head.sha }}?recursive=1" | jq -r '.tree[] | select(.type == "blob" and .path | startswith("src/") and .path | endswith(".md")) | .path')
+          FILES=$(curl -s -H "Authorization: token ***" "https://api.github.com/repos/tec-devs-2024/wiki/git/trees/47037755e145bb71c41c7885c07ee8427aaa7df2?recursive=1" | jq -r '.tree[] | select(.type == "blob" and (.path | type == "string") and .path | startswith("src/") and .path | endswith(".md")) | .path')
 
           # Update SUMMARY_test.md
           echo "# Summary" > SUMMARY_test.md
