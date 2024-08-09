@@ -1,5 +1,4 @@
 # Summary
-* [README.md](README.md)
 * [SUMMARY.md](SUMMARY.md)
 * [aprovechamiento.md](aprovechamiento.md)
 * [areas_cmmi.md](areas_cmmi.md)
