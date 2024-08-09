@@ -38,7 +38,8 @@ jobs:
         fi
 
         # Create or overwrite SUMMARY.md
-        echo "# Summary" > SUMMARY.md
+        rm src/SUMMARY.md
+        echo "# Summary" > src/SUMMARY.md
 
         # Function to indent markdown link
         create_link() {
@@ -47,7 +48,7 @@ jobs:
             local rel_path="${file#$base_path/}"
             local depth=$(echo "$rel_path" | grep -o '/' | wc -l)
             local indent=$(printf '%*s' $((depth * 2)) '')
-            echo "${indent}* [${file##*/}]($rel_path)" >> SUMMARY.md
+            echo "${indent}* [${file##*/}]($rel_path)" >> src/SUMMARY.md
         }
 
         # Find all files in the directory and its subdirectories
