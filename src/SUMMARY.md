@@ -1,6 +1,7 @@
 # Summary
 * [SUMMARY.md](SUMMARY.md)
 * [aprovechamiento.md](aprovechamiento.md)
+  * [plantilla_crear_procesos](archivos_artefactos_trabajo/plantilla_crear_procesos)
 * [areas_cmmi.md](areas_cmmi.md)
 * [chapter_1.md](chapter_1.md)
 * [cmmi.md](cmmi.md)
