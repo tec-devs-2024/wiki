@@ -5,6 +5,7 @@
 * [areas_cmmi.md](areas_cmmi.md)
 * [chapter_1.md](chapter_1.md)
 * [cmmi.md](cmmi.md)
+* [convenciones.md](convenciones.md)
 * [desarrollo.md](desarrollo.md)
 * [guia_lalo.md](guia_lalo.md)
 * [guias_procesos.md](guias_procesos.md)
