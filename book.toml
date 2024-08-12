@@ -1,5 +1,5 @@
 [book]
-authors = ${{ secrets.REVIEWERS }}
+authors = ["tec-devs-2024"]
 language = "es"
 multilingual = true
 src = "src"
