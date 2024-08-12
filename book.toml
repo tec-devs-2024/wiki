@@ -1,6 +1,6 @@
 [book]
 authors = ["tec-devs-2024"]
 language = "es"
-multilingual = true
+multilingual = false
 src = "src"
 title = "Wiki TecDevs"
