@@ -1,0 +1,31 @@
+name: Auto Assign Reviewers
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  auto-assign-reviewers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Auto Assign Reviewers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          # List of reviewers (GitHub usernames)
+          REVIEWERS=("felix-rojas" "Diego-spes")
+
+          # Convert the array to a JSON string
+          REVIEWERS_JSON=$(printf '%s\n' "${REVIEWERS[@]}" | jq -R . | jq -s .)
+
+          # API call to add reviewers
+          curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/requested_reviewers \
+            -d "{\"reviewers\": $REVIEWERS_JSON}"
