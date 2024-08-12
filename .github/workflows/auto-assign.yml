@@ -13,7 +13,7 @@ jobs:
 
       - name: Auto Assign Reviewers
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BOT }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
           REVIEWERS: ${{ secrets.REVIEWERS }}
