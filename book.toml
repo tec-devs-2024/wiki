@@ -1,6 +1,6 @@
 [book]
-authors = ["felix-rojas"]
-language = "en"
-multilingual = false
+authors = ${{ secrets.REVIEWERS }}
+language = "es"
+multilingual = true
 src = "src"
 title = "Wiki TecDevs"
