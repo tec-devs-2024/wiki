@@ -12,6 +12,8 @@
 * [matriz_riesgos.md](matriz_riesgos.md)
     * [admin_y_retro.md](notas/felix/admin_y_retro.md)
     * [denisse_alex.md](notas/felix/denisse_alex.md)
+    * [disciplined_agile.md](notas/felix/disciplined_agile.md)
+    * [equipos.md](notas/felix/equipos.md)
     * [felix.md](notas/felix/felix.md)
     * [product_manager.md](notas/felix/product_manager.md)
   * [notas.md](notas/notas.md)
