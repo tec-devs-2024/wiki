@@ -114,3 +114,59 @@ la evolución del producto.
 - Es legalmente problemártico, costoso -> No hay viabilidad
 
 Y aún si todo esto sale bien, se puede desperdiciar mucho tiempo -> Time to money
+
+---
+
+16/08/2024
+
+El compromiso está muy atado a una cultura de waterfall para evitar fallos. EStablecer medios de mitigación y manejo de expectativs para no dar un dolor al cliente.
+
+## Outcome based roadmaps
+
+| Vision | Business Strategy | Product Strategy | Roadmap |
+| --------------- | --------------- | --------------- | --------------- |
+| Company vision | Objetivo de negocio | Producto/Objetivo/Outcome | Momento de realización |
+
+- Conocer las problemáticas a detalle de los usuarios para complementar nuestas ideas
+
+## Product vision & Strategy
+
+### Product Vision
+
+**Inspira**
+
+- Describe el futuro que estamos tratando de crear
+- Idealmente en un periodo de entre 2 y 5 años
+- El propósito es **inspirar** a los equipos que serán los encargados de hacer
+que esta visión se vuelva realidad
+
+### Product Strategy
+
+**Enfoca**
+
+- En la secuencia de productos o releases que se planean entregar en el camino
+para lograr la visión del producto
+- Pueden ser versiones de un producto o productos que estén relacionados. Puede
+ser basado en milestones.
+
+### Principios de Product Vision
+
+1. ¿Por qué? Articula el propósito.
+2. Enamoramiento del problema, no de la solución.
+3. Que no de miedo pensar la visión en grande.
+4. Que no de miedo. Ser disruptivo, porque si no lo eres tú, alguien más lo será.
+5. La visión del producto debe ser inspiradora
+6. Determina y adopta tendencias revlevantes y significativas
+7. Identifica las cosas que están cambiando, así como las
+cosas que probablemente no lo harán
+8. Se terco con la visión de producto, pero flexible en los detalles.
+9. Cualquier visión de producto es un salto de fe.
+10. Evangeliza continua y persistentemente. La visión debe de ser evangelizadora.
+
+### Principios del Product Strategy
+
+1. Enfóquense un mercado objetivo o persona a la vez
+2. La estreategia de producto debe de estar a lineada a la estrategia de negocio
+3. Necesita estar alineada con el área de ventas y con la estrategia de salida
+4. Obsesionarse con los usuarios, no con la competencia
+5. Comuniquen la estrategia a lo largo de la organización
